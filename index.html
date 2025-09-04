@@ -1,0 +1,260 @@
+<script>
+  document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Pega apenas o nome
+    let nome = encodeURIComponent(document.getElementById('nome').value);
+    // Mensagem fixa só com o nome
+    let url = `https://wa.me/5531984127957?text=Olá,tudo bem? meu nome é ${nome} 
+  quero receber meu ebook!`;
+    // Abre o WhatsApp
+    window.open(url, '_blank');
+  });
+</script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ebook Gratuito – Marketing Digital</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #28a745;
+      background-image: url('https://seeklogo.com/images/K/kiwify-logo-vector-logo-3F7E0F6A8F-seeklogo.com.png');
+      background-repeat: repeat;
+      background-position: center;
+      background-size: 200px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 580px;
+      background: #e6f4ea;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1a3d1a;
+      font-size: 34px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .sub {
+      color: #2e5d2e;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .ebook-mockup {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .ebook-box {
+      background: #c8e6c9;
+      border: 2px solid #1a3d1a;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .ebook-box h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .ebook-box ul {
+      list-style: none;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .ebook-box li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .ebook-box li::before {
+      content: "✓";
+      font-weight: 700;
+      color: #1a3d1a;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      background: #c8e6c9;
+      border: 2px solid #1a3d1a;
+      border-radius: 12px;
+      outline: none;
+      transition: .25s;
+    }
+
+    .input-group input::placeholder {
+      color: #2e5d2e;
+    }
+
+    .input-group input:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 0 4px rgba(40, 167, 69, .15);
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #28a745, #1e7e34);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+      background: linear-gradient(90deg, #1e7e34, #28a745);
+    }
+
+    /* Selos de confiança */
+    .trust-box {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .trust-box div {
+      background: #1a3d1a;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    .trust {
+      color: #1a3d1a;
+      font-size: 13px;
+      margin-top: 14px;
+    }
+
+    .foot {
+      color: #7c8a7c;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width:480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .sub {
+        font-size: 15px;
+      }
+
+      .input-group input {
+        padding: 14px;
+        font-size: 15px;
+      }
+
+      button {
+        padding: 14px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>💰 Transforme seu conhecimento em dinheiro no digital!</h1>
+    <p class="sub">Preencha os campos abaixo e receba seu <strong>ebook gratuito</strong> com estratégias que realmente funcionam!</p>
+
+    <!-- Mockup do ebook -->
+    <img src="https://via.placeholder.com/400x250.png?text=EBOOK+EXCLUSIVO" alt="Ebook Marketing Digital" class="ebook-mockup">
+
+    <!-- Caixa de benefícios -->
+    <div class="ebook-box">
+      <h3>📘 O que você vai aprender:</h3>
+      <ul>
+        <li>Como iniciar no marketing digital do zero</li>
+        <li>Estratégias práticas para gerar renda extra rapidamente</li>
+        <li>Segredos usados pelos maiores players do mercado</li>
+        <li>Checklist passo a passo para aplicar hoje mesmo</li>
+        <li>Dicas de ferramentas que facilitam seu trabalho</li>
+        <li>Como transformar seu conhecimento em vendas reais</li>
+      </ul>
+    </div>
+
+    <!-- Prova social -->
+    <p style="font-size:15px; color:#555; margin:12px 0;">💡 Mais de <strong>500 pessoas</strong> já baixaram este ebook e começaram a mudar sua vida financeira!</p>
+
+    <!-- Formulário -->
+    <form id="leadForm" target="_blank">
+      <div class="input-group">
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+      </div>
+      <div class="input-group">
+        <input type="tel" id="whatsapp" placeholder="Digite seu WhatsApp" required>
+      </div>
+      <button type="submit">📩 Receber agora no WhatsApp</button>
+    </form>
+
+    <!-- Selos de confiança -->
+    <div class="trust-box">
+      <div>100% Seguro</div>
+      <div>Entrega Rápida</div>
+      <div>Conteúdo Exclusivo</div>
+    </div>
+
+    <p class="trust">🔒 Suas informações estão seguras. Você receberá o ebook diretamente no WhatsApp.</p>
+    <p class="foot">© 2025 SeuNome. Todos os direitos reservados.</p>
+  </div>
+
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Pega apenas o nome
+      let nome = encodeURIComponent(document.getElementById('nome').value);
+      // Mensagem fixa só com o nome
+      let url = `https://wa.me/5531984127957?text=Olá, meu nome é ${nome} e quero receber meu ebook!`;
+      // Abre o WhatsApp
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+
+</html>
