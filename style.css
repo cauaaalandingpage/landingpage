@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #28a745;
+  background-image: url("https://seeklogo.com/images/K/kiwify-logo-vector-logo-3F7E0F6A8F-seeklogo.com.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 200px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 580px;
+  background: #e6f4ea;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 36px 28px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  background: linear-gradient(90deg, #ffdd00, #ff6f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sub {
+  color: #2e5d2e;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.ebook-mockup {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.ebook-mockup:hover {
+  transform: scale(1.05);
+}
+
+.ebook-box {
+  background: #c8e6c9;
+  border: 2px solid #1a3d1a;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ebook-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.ebook-box h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.ebook-box ul {
+  list-style: none;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.ebook-box li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.ebook-box li::before {
+  content: "✓";
+  font-weight: 700;
+  color: #1a3d1a;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+.input-group input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  background: #c8e6c9;
+  border: 2px solid #1a3d1a;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s;
+}
+.input-group input::placeholder {
+  color: #2e5d2e;
+}
+.input-group input:focus {
+  border-color: #ff6f00;
+  box-shadow: 0 0 0 4px rgba(255, 111, 0, 0.25);
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ffdd00, #ff6f00);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.trust-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.trust-box div {
+  background: #1a3d1a;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.trust {
+  color: #1a3d1a;
+  font-size: 13px;
+  margin-top: 14px;
+}
+.foot {
+  color: #7c8a7c;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+  .sub {
+    font-size: 15px;
+  }
+  .input-group input {
+    padding: 14px;
+    font-size: 15px;
+  }
+  button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
